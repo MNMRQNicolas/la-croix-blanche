@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À Propos</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
   <header>
     <div id="navigation"></div>
-    <div class="container-header">
+    <div class="header-container">
       <h1>À Propos</h1>
       <h6>Découvrez notre histoire...</h6>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
@@ -17,11 +19,105 @@
     </div>
   </header>
   <main>
+    <section class="slideshow">
+      <div class="slideshow-container swiper">
+        <div class="slideshow-list swiper-wrapper">
+          <div class="slideshow-item swiper-slide">
+            <div class="slideshow-img">
+              <img src="images/slideshow-equipe.png" alt="Virginie et Mohamed">
+            </div>
+            <div class="slideshow-titre">
+              <h2>L'équipe</h2>
+              <h3>Qui Sommes-Nous ?</h3>
+            </div>
+            <div class="slideshow-texte">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
+            </div>
+          </div>
+          <div class="slideshow-item swiper-slide">
+            <div class="slideshow-img">
+              <img src="images/slideshow-restaurant.png" alt="La devanture du restaurant La Croix Blanche">
+            </div>
+            <div class="slideshow-titre">
+              <h2>Le Restaurant</h2>
+              <h3>La Croix Blanche</h3>
+            </div>
+            <div class="slideshow-texte">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
+            </div>
+          </div>
+          <div class="slideshow-item swiper-slide">
+            <div class="slideshow-img">
+              <img src="images/slideshow-quartier.png" alt="Le quartier Saint-Seurin">
+            </div>
+            <div class="slideshow-titre">
+              <h2>Le Quartier</h2>
+              <h3>Saint-Seurin / La Croix Blanche</h3>
+            </div>
+            <div class="slideshow-texte">
+              <p>Le quartier de Saint-Seurin, l'un des plus anciens de Bordeaux, est riche en histoire et en patrimoine. Son origine remonte à l'époque gallo-romaine, et il tire son nom de la basilique Saint-Seurin, un joyau de l'art roman classé au patrimoine mondial de l'UNESCO. Ce quartier a longtemps été un lieu de pèlerinage important sur le chemin de Saint-Jacques-de-Compostelle. Avec ses ruelles pittoresques, ses élégantes demeures et ses nombreux espaces verts, Saint-Seurin conserve un charme authentique tout en étant au cœur de la vie culturelle et sociale de Bordeaux. La rue de la Croix Blanche à Bordeaux, située dans le quartier historique de Saint-Seurin, est réputée pour son charme résidentiel et ses maisons élégantes. Elle offre une atmosphère paisible avec des commerces de proximité et un accès facile aux sites culturels de la ville.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <section class="fournisseurs">
+      <div class="titre">
+        <h2>Fournisseurs</h2>
+        <h3>Nos produits</h3>
+      </div>
+      <div class="texte-intro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
+      </div>
+      <div class="fournisseurs-container">
+        <div class="list-fournisseurs">
+          <h4>Boucher</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Charcutière</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Poissonnier</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Volailler</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Fromager</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Maraîchère</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+        <div class="list-fournisseurs">
+          <h4>Boulanger</h4>
+          <h5>Prénom Nom</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula.</p>
+        </div>
+      </div>
+    </section>
     <section id="reservation" class="contact"></section>
   </main>
   <footer>
     <div id="footer"></div>
   </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="scripts.js" defer></script>
 </body>
 </html>
