@@ -17,6 +17,43 @@
     </div>
   </header>
   <main>
+    <section class="formulaire">
+      <div class="formulaire-container">
+        <form action="" method="post">
+          <div class="nom">
+            <label for="nom">Nom *</label>
+            <input type="text" name="nom" id="nom" placeholder="Quel est votre nom" required>
+          </div>
+          <div class="prenom">
+            <label for="prenom">Prénom *</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Quel est votre prénom" required>
+          </div>
+          <div class="telephone">
+            <label for="telephone">Téléphone *</label>
+            <input type="number" name="telephone" id="telephone" placeholder="Quel est votre numéro de téléphone" required>
+          </div>
+          <div class="email">
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" name="email" id="email" placeholder="Quelle est votre adresse e-mail" required>
+          </div>
+          <div class="date-heure">
+            <label for="date-heure">Date et Heure *</label>
+            <input type="datetime-local" name="date-heure" id="date-heure" required>
+          </div>
+          <div class="commentaire">
+            <label for="commentaire">Commentaire</label>
+            <textarea name="commentaire" id="commentaire"></textarea>
+          </div>
+          <div class="cta-envoyer">
+            <input type="submit" value="Envoyer**">
+          </div>
+          <div class="mentions-formulaire">
+            <p>* Les champs sont obligatoires</p>
+            <p>** Toutes les demandes soumises par e-mail devront être validées de notre part pour que votre réservation soit enregistrée.</p>
+          </div>
+        </form>
+      </div>
+    </section>
     <section id="infos" class="infos-pratiques"></section>
   </main>
   <footer>
