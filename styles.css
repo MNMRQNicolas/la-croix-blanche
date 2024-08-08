@@ -2,6 +2,7 @@
 * {
   all: unset;
   display: revert;
+  box-sizing: border-box;
 }
 
 /* --- Couleurs --- */
@@ -15,7 +16,6 @@
   --grey1: #AEAEAE;
   --grey2: #D9D9D9;
   --white: #FFFFFF;
-
 }
 
 /* --- Typographies --- */
@@ -42,7 +42,7 @@ h2 {
   color: var(--blue2);
   text-align: center;
 }
-h3{
+h3 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
@@ -54,12 +54,35 @@ h3{
   color: transparent;
   text-align: center;
 }
+h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  line-height: normal;
+  background: linear-gradient(0deg, rgba(255,195,0,1) 0%, rgba(255,214,10,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: normal;
+  color: var(--white);
+  text-align: center;
+}
 p {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 1.125em;
+  line-height: 1.5;
   color: var(--black2);
   text-align: center;
 }
@@ -84,13 +107,73 @@ main {
 }
 section {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container {
+  width: 1280px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.content {
-  width: 1280px;
+.full-container {
+  width: 100%;
+}
+.fle-dir-col-cen-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.grid-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 24px;
+}
+.titre {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.texte-intro {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+/* --- CTA --- */
+.cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.cta a {
+  padding: 24px 52px;
+  border-radius: 40px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cta a:hover {
+  background-color: var(--yellow2);
+  color: var(--white);
+}
+.bg-yel {
+  background-color: var(--yellow1);
+  color: var(--white);
+}
+.bg-whi {
+  background-color: var(--white);
+  color: var(--black2);
 }
 
 /* --- Navigation --- */
@@ -185,4 +268,126 @@ li.nav-telephone img {
   position: absolute;
   height: 36px;
   left: 0;
+}
+
+/* --- Page d'Accueil --- */
+/* Header */
+header {
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #003566 0%, #001D3D 50%, #000814 100%);
+}
+.header-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/images/bg-header-assiette.png);
+  background-size: cover;
+  background-position: center;
+}
+.slogan {
+  width: 100%;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slogan h1 {
+  padding-bottom: 12px;
+}
+.slogan h2 {
+  padding-bottom: 12px;
+  color: var(--white);
+}
+.slogan p {
+  padding-bottom: 18px;
+  font-size: 1.125em;
+  color: var(--white);
+}
+.drapeau {
+  margin: 0 auto;
+}
+/* Restaurant */
+.restaurant {
+ padding-bottom: 0px;
+}
+/* Slider */
+.slider ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: max-content;
+  animation: runSlider 40s linear infinite;
+}
+.slider img {
+  height: auto;
+  margin: 0 12px;
+}
+.slider li {
+  width: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+@keyframes runSlider {
+  from{
+    transform: translateX(0);
+  } to {
+    transform: translateX(-2663px);
+  }
+}
+/* Prestations */
+.card-la-carte, .card-la-cave {
+  width: 100%;
+  min-height: 680px;
+  padding: 60px;
+  background-color: var(--blue1);
+  border-radius: 24px;
+}
+.card-la-carte h4, .card-la-cave h4 {
+  margin-bottom: 16px;
+}
+.card-la-carte p, .card-la-cave p {
+  color: var(--white);
+  font-size: 1em;
+  line-height: 1.375em;
+  font-weight: 300;
+  margin-top: 60px;
+}
+.card-la-carte {
+  background-image: url(/images/bg-card-la-carte.png);
+  background-size: cover;
+  background-position: top;
+}
+.card-la-cave {
+  background-image: url(/images/bg-card-la-cave.png);
+  background-size: cover;
+  background-position: top;
+}
+/* Qui Sommes-Nous */
+.qui-sommes-nous {
+  background-color: var(--black2);
+  background-image: url(/images/bg-qui-sommes-nous.png);
+  background-repeat: no-repeat;
+  background-position-y: middle;
+  background-size: 50%;
+}
+.qui-sommes-nous h2 {
+  color: var(--white);
+}
+.texte-presentation {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.texte-presentation p {
+  padding: 0 0 20px 60px;
+  color: var(--white);
+  text-align: left;
 }
