@@ -17,11 +17,15 @@ input {
   --black2: #000814;
   --blue1: #001d3d;
   --blue2: #003566;
+  --blue3: #F5F7F9;
   --yellow1: #ffc300;
   --yellow2: #ffd60a;
   --grey1: #AEAEAE;
   --grey2: #D9D9D9;
   --white: #FFFFFF;
+}
+.red {
+  color: #E1000F;
 }
 
 /* --- Typographies --- */
@@ -106,6 +110,10 @@ p, li {
 }
 
 /* --- Général --- */
+.mtb-20 {
+  margin: 20px 0 !important;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -187,6 +195,10 @@ section {
 .bg-whi {
   background-color: var(--white);
   color: var(--black2);
+}
+.bg-blu {
+  background-color: var(--blue1);
+  color: var(--white);
 }
 
 /* --- Navigation --- */
@@ -447,4 +459,29 @@ header {
   content: url(/images/icons/icon-bus.png);
   margin-right: 6px;
   vertical-align: middle;
+}
+/* Contact */
+section.contact {
+  background-color: var(--blue3);
+}
+.reservation-container {
+  width: 100%;
+}
+.tel-contact {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  line-height: normal;
+  background: linear-gradient(0deg, rgba(255,195,0,1) 0%, rgba(255,214,10,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin: 16px 0;
+}
+.reservation-mentions {
+  font-weight: 700;
+  font-size: 0.75em;
 }
