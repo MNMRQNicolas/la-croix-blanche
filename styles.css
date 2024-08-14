@@ -156,6 +156,18 @@ footer {
   padding: 60px 24px;
   background-color: var(--black2);
 }
+.head-degr-1 {
+  width: 100%;
+  height: 690px !important;
+  flex-shrink: 0;
+  background: linear-gradient(#000814, #001D3D);
+}
+.head-degr-2 {
+  width: 100%;
+  height: 690px !important;
+  flex-shrink: 0;
+  background: linear-gradient(#001D3D, #000814);
+}
 .container {
   width: 1280px;
   display: flex;
@@ -585,12 +597,6 @@ section.contact {
 
 /* --- La Carte --- */
 /* Header */
-.head-carte {
-  width: 100%;
-  height: 690px !important;
-  flex-shrink: 0;
-  background: linear-gradient(#000814, #001D3D);
-}
 .header-container-carte {
   width: 100%;
   height: 790px !important;
@@ -828,4 +834,99 @@ input[type="radio"].bt-radio:checked + label::after {
   line-height: normal;
   color: var(--white);
   justify-content: end;
+}
+
+/* --- A Propos --- */
+/* Header */
+.header-container-a-propos {
+  width: 100%;
+  height: 790px !important;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-image: url(/images/bg-header-a-propos.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+/* Swiper JS */
+.bg-swiper {
+  width: 100%;
+  height: fit-content;
+  padding: 0 0 80px 0;
+  background-color: var(--blue1);
+  background: linear-gradient(#000814, #001D3D);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+  width: 1280px;
+  height: fit-content;
+  margin: 0 auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+.swiper-title, .swiper-text {
+  max-width: 960px;
+  height: fit-content;
+  margin: 0 auto;
+}
+.swiper-title {
+  margin-bottom: 40px;
+}
+.swiper-title h2, .swiper-text p {
+  color: var(--white);
+}
+.swiper-text {
+  margin-bottom: 40px;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute !important;
+  top: var(--swiper-navigation-top-offset, 85%) !important;
+  color: var(--white) !important;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: var(--yellow2) !important;
+}
+/* Fournisseurs */
+.fournisseur-card {
+  margin-bottom: 16px;
+}
+.fournisseur-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.fournisseur-card p {
+  font-size: 1em;
+  line-height: normal;
+  padding: 0 8px;
+}
+.fournisseur-card h5 {
+  font-size: 1.5em;
+  line-height: normal;
+  color: var(--blue2);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.boulanger {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 0px !important;
 }
