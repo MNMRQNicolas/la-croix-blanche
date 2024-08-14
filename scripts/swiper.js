@@ -1,7 +1,7 @@
 // ----------------- //
 // --- Swiper JS --- //
 // ----------------- //
-const swiper = new Swiper('.slideshow-container', {
+const swiper = new Swiper('.mySwiper', {
   loop: true,
   grabCursor: true,
   spaceBetween: 30,
