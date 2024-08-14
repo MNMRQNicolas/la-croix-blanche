@@ -24,6 +24,9 @@ input {
   --grey2: #D9D9D9;
   --white: #FFFFFF;
 }
+.white {
+  color: #FFFFFF !important;
+}
 .red {
   color: #E1000F;
 }
@@ -123,6 +126,9 @@ p, li {
 .mtb-20 {
   margin: 20px 0 !important;
 }
+.mb-80 {
+  margin-bottom: 80px;
+}
 
 header {
   display: flex;
@@ -186,6 +192,18 @@ footer {
   grid-auto-rows: auto;
   gap: 24px;
   overflow: hidden;
+}
+.grid-1-3-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-rows: auto;
+  gap: 24px;
+  overflow: hidden;
+}
+.grid-roses-bulles {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .titre {
   width: 100%;
@@ -335,7 +353,7 @@ header {
   flex-shrink: 0;
   background: radial-gradient(50% 50% at 50% 50%, #003566 0%, #001D3D 50%, #000814 100%);
 }
-.header-container {
+.header-container-accueil {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -563,4 +581,251 @@ section.contact {
 }
 .dev-nm {
   content: url(/images/icons/icon-nm.png);
+}
+
+/* --- La Carte --- */
+/* Header */
+.head-carte {
+  width: 100%;
+  height: 690px !important;
+  flex-shrink: 0;
+  background: linear-gradient(#000814, #001D3D);
+}
+.header-container-carte {
+  width: 100%;
+  height: 790px !important;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-image: url(/images/bg-header-la-carte.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.card-plats {
+  width: 100%;
+  height: auto;
+  padding: 0 0 80px 0;
+  background-color: var(--blue1);
+  background: linear-gradient(#001D3D, #000814);
+  display: flex;
+  justify-content: center;
+}
+.img-card-plats {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+/* Menu & Carte */
+.card-menu {
+  width: 100%;
+  height: fit-content;
+  border-radius: 24px;
+  border: 1px solid #D9D9D9;
+  padding: 40px 20px 16px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.head-card {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.prix {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2em;
+  line-height: normal;
+  color: var(--black2);
+}
+.content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+.content-card ul {
+  width: 100%;
+  list-style: none;
+}
+.content-card li {
+  width: 100%;
+  height: 96px;
+  text-align: left;
+  line-height: normal;
+  padding: 24px 0;
+  border-top: 1px solid #DEDEDE;
+  display: flex;
+  align-items: center;
+}
+.content-card .grid-2 {
+  grid-template-columns: 5fr 1fr;
+  gap: 0px;
+}
+.list-carte li {
+padding-right: 8px;
+}
+.list-prix li {
+  justify-content: end;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: normal;
+  color: var(--black2);
+}
+/* Cave */
+.cave {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 20px !important;
+  background-image: url(/images/bg-cave.png);
+  background-size: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: var(--black2);
+}
+.cave h2 {
+  color: var(--white);
+}
+.vins-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.vins-container h5 {
+  margin-bottom: 24px;
+}
+.filtre-vins {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.125em;
+  line-height: normal;
+  color: var(--white);
+}
+label {
+  margin: 0 16px;
+  cursor: pointer;
+}
+input[type="radio"].bt-radio {
+  display: none;
+}
+input[type="radio"].bt-radio + label {
+  position: relative;
+  padding-left: 24px;
+  padding-top: 10px;
+}
+input[type="radio"].bt-radio + label::before,
+input[type="radio"].bt-radio + label::after {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  content:'';
+  border-radius: 1rem;
+}
+input[type="radio"].bt-radio + label::before {
+  bottom: 3px;
+  left: 3px;
+  border: 1px solid var(--grey1);
+  background-color: var(--grey2);
+  width: 1rem;
+  height: 1rem;
+}
+input[type="radio"].bt-radio + label::after {
+  bottom: 6px;
+  left: 6px;
+  width: calc(1rem - 6px);
+  height: calc(1rem - 6px);
+}
+input[type="radio"].bt-radio:checked + label::after {
+  background-color: var(--yellow2);
+}
+.result-vins {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-vin {
+  width: 100%;
+  height: fit-content;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.wine {
+  display: none;
+}
+.wine.active {
+  display: block;
+}
+.result-vins h4 {
+  width: 100%;
+  margin-top: 60px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.content-result {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 0 24px;
+}
+.region {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.region h5 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+.content-result ul {
+  width: 100%;
+  list-style: none;
+}
+.content-result li {
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+.content-result .grid-2 {
+  grid-template-columns: 5fr 1fr;
+  gap: 0px;
+}
+.list-vins li {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.125em;
+  line-height: normal;
+  color: var(--white);
+  justify-content: start;
+}
+.list-prix-vins li {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: normal;
+  color: var(--white);
+  justify-content: end;
 }

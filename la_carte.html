@@ -10,64 +10,448 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="head-carte">
     <div id="navigation"></div>
-    <div class="header-container">
-      <h1>La Carte</h1>
-      <h6>Des produits frais et de saison</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
-      <div class="plats"></div>
+    <div class="header-container-carte">
+      <div class="full-container">
+        <div class="titre">
+          <h1>La Carte</h1>
+          <h5>Des produits frais et de saison</h6>
+        </div>
+        <div class="small-container texte-intro">
+          <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula. Nam tellus urna, lobortis vel auctor ut, consequat ac tellus. Suspendisse consequat tristique justo tempor hendrerit. Nunc sollicitudin eros sed est lacinia posuere. Nam sed felis volutpat, hendrerit lectus cursus, posuere neque.</p>
+        </div>
+      </div>
     </div>
   </header>
   <main>
+    <div class="card-plats">
+      <div class="container">
+        <div class="grid-2">
+          <div class="img-card-plats">
+            <img src="/images/plat-01.png" alt="Le premier plat">
+          </div>
+          <div class="img-card-plats">
+            <img src="/images/plat-02.png" alt="Le second plat">
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="menu">
-      <div class="titre">
-        <h2>Menu</h2>
-        <h3>Midi</h3>
+      <div class="container mb-80">
+        <div class="titre">
+          <h2>Menu</h2>
+          <h3>Midi</h3>
+        </div>
+        <div class="grid-3">
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Entrées</h4>
+              <p class="prix">5 €</p>
+            </div>
+            <div class="content-card" id="menu-entrees">
+              <ul>
+                <li>Gaspacho de tomates ananas</li>
+                <li>Croquettes de boudin mayonnaise au wasabi</li>
+                <li>Tartare d’avocat et crevettes</li>
+                <li>Taboulet de Quinoa crevettes de risotto</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Plats</h4>
+              <p class="prix">14 €</p>
+            </div>
+            <div class="content-card" id="menu-plats">
+              <ul>
+                <li>Brandade de Poisson, Salade</li>
+                <li>Poke Bowl au thon</li>
+                <li>Wok de Boeuf thaï</li>
+                <li>Tartare de crevettes, Avocat avec Frites</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Desserts</h4>
+              <p class="prix">5 €</p>
+            </div>
+            <div class="content-card" id="menu-desserts">
+              <ul>
+                <li>Nem Ananas</li>
+                <li>Beignet Citron Vert</li>
+                <li>Île Flotante</li>
+                <li>Crème Renversée</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="menu-container">
-        <div id="entrees"></div>
-        <div id="plats"></div>
-        <div id="desserts"></div>
-      </div>
-    </section>
-    <section class="carte">
-      <div class="titre">
-        <h2>Carte</h2>
-        <h3>Midi et Soir</h3>
-      </div>
-      <div class="carte-container">
-        <div id="entrees"></div>
-        <div id="viandes-poissons"></div>
-        <div id="desserts"></div>
+      <div class="container">
+        <div class="titre">
+          <h2>Carte</h2>
+          <h3>Midi et Soir</h3>
+        </div>
+        <div class="grid-3">
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Entrées</h4>
+            </div>
+            <div class="content-card" id="carte-entrees">
+              <div class="grid-2">
+                <ul class="list-carte">
+                  <li>Croquettes de Jambon Coulis de Piquillos</li>
+                  <li>Carpaccio de Poule, sauce Vierge aux échalottes</li>
+                  <li>Chèvre Rôtu, Fraicheur de haricots</li>
+                  <li>Burrata, Tomate Coeur de Boeuf</li>
+                  <li>Duo de Ris de Veau et Croquettes de Pieds de Cochon</li>
+                  <li>Thon torrefié”, sauce sashimi</li>
+                  <li>Duo Gravelax et Cabillaud enmaki</li>
+                </ul>
+                <ul class="list-prix">
+                  <li>10 €</li>
+                  <li>14 €</li>
+                  <li>12 €</li>
+                  <li>14 €</li>
+                  <li>14 €</li>
+                  <li>13 €</li>
+                  <li>14 €</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Viandes et Poissons</h4>
+            </div>
+            <div class="content-card" id="carte-viandes-poissons">
+              <div class="grid-2">
+                <ul class="list-carte">
+                  <li>Tartare de Boeuf, Trio de frites au Parmesan, Salade</li>
+                  <li>Cote de Boeuf pour 2/pers (1Kg), Os à Moelle, Trio de frites</li>
+                  <li>Cote de Veau de lait aux Pruneaux, Purée</li>
+                  <li>Onglet de Boeuf, Trio de frites, Salade</li>
+                  <li>Ris de Veau, Purée</li>
+                  <li>Merlu à l’Espagnole, Pétales d’Ail frits, Risotto à l’encre de seiche</li>
+                  <li>Dorade au citron confit pour 2/pers (900gr)</li>
+                  <li>Thon croustillant, toom libanaise, Légumes croquants</li>
+                  <li>Céviché de dorade Sébaste, Trio de frites au parmesan</li>
+                  <li>Chipirons au chorizo, Risotto à l’encre de seiche</li>
+                </ul>
+                <ul class="list-prix">
+                  <li>18 €</li>
+                  <li>72 €</li>
+                  <li>25 €</li>
+                  <li>18 €</li>
+                  <li>28 €</li>
+                  <li>19 €</li>
+                  <li>58 €</li>
+                  <li>27 €</li>
+                  <li>20 €</li>
+                  <li>26 €</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-menu">
+            <div class="head-card">
+              <h4>Desserts</h4>
+            </div>
+            <div class="content-card" id="carte-desserts">
+              <div class="grid-2">
+                <ul class="list-carte">
+                  <li>Nem Ananas</li>
+                  <li>Beignet Citron Vert</li>
+                  <li>Île Flotante</li>
+                  <li>Crème Renversée</li>
+                  <li>Nem Ananas</li>
+                  <li>Beignet Citron Vert</li>
+                  <li>Île Flotante</li>
+                  <li>Crème Renversée</li>
+                </ul>
+                <ul class="list-prix">
+                  <li>10 €</li>
+                  <li>12 €</li>
+                  <li>8 €</li>
+                  <li>9 €</li>
+                  <li>13 €</li>
+                  <li>15 €</li>
+                  <li>14 €</li>
+                  <li>10 €</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="cave">
-      <div class="titre">
-        <h2>Cave</h2>
-        <h3>Nos Vins</h3>
-      </div>
-      <div class="texte-cave">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula pahilo de que hurgy dolum.</p>
-      </div>
-      <div id="vins" class="vins-container">
-        <form>
-          <p>Notre sélection de vin :</p>
-          <div>
-            <input type="radio" id="1" name="bulles" value="bulles" />
-            <label for="1">Nos Bulles</label>
+      <div class="container">
+        <div class="titre">
+          <h2>Cave</h2>
+          <h3>Nos Vins</h3>
+        </div>
+        <div class="small-container texte-intro">
+          <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum nulla eget dui tincidunt elementum. Donec porttitor eu odio vitae blandit. Nam eleifend turpis vel lacus maximus efficitur. Phasellus quis pulvinar ligula pahilo de que hurgy dolum.</p>
+        </div>
+        <div id="vins" class="vins-container">
+          <h5>Notre sélection de vins</h5>
+          <div class="filtre-vins">
+            <form action="/action-page.php">
+              <input type="radio" class="bt-radio" id="rouges" name="wine-category" value="rouges" checked>
+              <label for="rouges">Nos Rouges</label>
 
-            <input type="radio" id="2" name="roses" value="roses" />
-            <label for="2">Nos Rosés</label>
+              <input type="radio" class="bt-radio" id="blancs" name="wine-category" value="blancs">
+              <label for="blancs">Nos Blancs</label>
 
-            <input type="radio" id="3" name="blancs" value="blancs" />
-            <label for="3">Nos Blancs</label>
+              <input type="radio" class="bt-radio" id="roses" name="wine-category" value="roses">
+              <label for="roses">Nos Rosés</label>
 
-            <input type="radio" id="4" name="rouges" value="rouges" />
-            <label for="4">Nos Rouges</label>
+              <input type="radio" class="bt-radio" id="bulles" name="wine-category" value="bulles">
+              <label for="bulles">Nos Bulles</label>
+            </form>
           </div>
-        </form>
-        <div id="selectVins"></div>
+          <div class="result-vins">
+            <div class="card-vin wine rouges">
+              <div class="head-card">
+                <h4>Nos Rouges</h4>
+              </div>
+              <div class="grid-2">
+                <div class="content-result">
+                  <div class="region">
+                    <h5>Bordeaux</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Bégotin de Cht Bégot, 2016, Côtes-De-Bourg</li>
+                        <li>Château Côte Montpezat, 2011, Côtes-De-Castillon</li>
+                        <li>Château Larriveau, 2019, Canon-Fronsac </li>
+                        <li>Château Tour Léognan, 2020, Pessac-Léognan</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>26 €</li>
+                        <li>35 €</li>
+                        <li>36 €</li>
+                        <li>44 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Loire</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine Saint Vincent (Bio, 2021, Saumur Champigny)</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>35 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Notre sélection de Grands Vins</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Château Pindefleurs, 2018, Saint-Emilion Grand Cru</li>
+                        <li>Château La Truffe, 2013, Pomerol</li>
+                        <li>Château Meyney, 2017, Saint-Estèphe</li>
+                        <li>Château Lalande-Borie, 2014, Saint-Julien</li>
+                        <li>Château Chasse Spleen, 2015, Moulis</li>
+                        <li>Château Phélan-Ségur, 2015, Saint-Estèphe</li>
+                        <li>Château Giscours (3ème GCC), 2012, Margaux</li>
+                        <li>Château Pontet Canet 5ème GCC(Bio), 2011, Pauillac</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>48 €</li>
+                        <li>55 €</li>
+                        <li>72 €</li>
+                        <li>84 €</li>
+                        <li>110 €</li>
+                        <li>120 €</li>
+                        <li>140 €</li>
+                        <li>190 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-result">
+                  <div class="region">
+                    <h5>Bourgogne</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine De Naisse, 2020, Bourgogne</li>
+                        <li>Domaine Pavelot Les Cras, 2022, Aloxe-Corton</li>
+                        <li>Domaine Pavelot Aux Guettes, 2022, Savigny-Les-Beaunes</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>40 €</li>
+                        <li>84 €</li>
+                        <li>95 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Rhône</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine De La Florane (Bio), 2022, Visan</li>
+                        <li>Domaine Fond Croze (Bio), 2021, Rasteau</li>
+                        <li>Domaine Aléofane, Natacha Chave (Bio), 2022, Crozes-Hermitage</li>
+                        <li>Laurus, Gabriel Meffre, 2017, Vacqueyras</li>
+                        <li>Vieux Donjon, 2019, Châteauneuf Du Pape</li>
+                        <li>Domaine Christophe Semaska, 2019, Côte-Rôtie</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>28 €</li>
+                        <li>43 €</li>
+                        <li>48 €</li>
+                        <li>49 €</li>
+                        <li>72 €</li>
+                        <li>87 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Sud de France</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine Lauriga, 2021, Côtes Catalanes</li>
+                        <li>Château des Crès Ricards, 2021, Terrasses du Larzac</li>
+                        <li>Les Mal Aimés, Pierre Cros, 2022, Vin de France</li>
+                        <li>Domaine des Rocs, Santo Lupo(Bio), 2021, Pic Saint-Loup</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>28 €</li>
+                        <li>35 €</li>
+                        <li>36 €</li>
+                        <li>40 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-vin wine blancs">
+              <div class="head-card">
+                <h4>Nos Blancs</h4>
+              </div>
+              <div class="grid-2">
+                <div class="content-result">
+                  <div class="region">
+                    <h5>Bordeaux</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Château Batsères, 2022, Graves</li>
+                        <li>Château Tour Léognan, 2020, Pessac Léognan</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>27 €</li>
+                        <li>42 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Loire</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine Delobel Cuvée Angle Droit (Bio), 2021, Touraine</li>
+                        <li>Domaine Les Deux Cailloux, 2021, Pouilly-Fumé</li>
+                        <li>Domaine de La Grange Tiphaine Clef De Sol (Bio), 2021, Montlouis</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>30 €</li>
+                        <li>42 €</li>
+                        <li>48 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-result">
+                  <div class="region">
+                    <h5>Bourgogne</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine De Naisse, 2020, Mâcon Village</li>
+                        <li>Domaine Samuel Billaud, 2020, Chablis</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>39 €</li>
+                        <li>57 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Sud-Ouest</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Domaine de l’Herré, 2021, Côtes de Gascogne (Sec)</li>
+                        <li>L’Orée de la Chenaie, 2021, Côtes de Gascogne (Doux)</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>26 €</li>
+                        <li>27 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-vin wine roses">
+              <div class="head-card">
+                <h4>Nos Rosés</h4>
+              </div>
+              <div class="grid-1-3-1">
+                <div class="content-result grid-roses-bulles">
+                  <div class="region">
+                    <h5>Provence</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Cap des Borrels, 2023, Côtes De Provences</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>28 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="region">
+                    <h5>Provence-Alpes-Côte d'Azur</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Saint M Grand Cru Classé, 2023, Côtes De Provences</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>38 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-vin wine bulles">
+              <div class="head-card">
+                <h4>Nos Bulles</h4>
+              </div>
+              <div class="grid-1-3-1">
+                <div class="content-result grid-roses-bulles">
+                  <div class="region">
+                    <h5>Champagne</h5>
+                    <div class="grid-2">
+                      <ul class="list-vins">
+                        <li>Thierry Grandin, Cuvée Marcel Jardin, Champagne Premier Cru</li>
+                        <li>Thierry Grandin, Eclat Blanc, Millésimé 2015, Champagne</li>
+                        <li>Laurent Perrier Brut, La Cuvée, Champagne</li>
+                      </ul>
+                      <ul class="list-prix-vins">
+                        <li>68 €</li>
+                        <li>68 €</li>
+                        <li>75 €</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="reservation" class="contact"></section>
@@ -76,5 +460,6 @@
     <div id="footer"></div>
   </footer>
   <script src="scripts.js" defer></script>
+  <script src="/scripts/filter.js"></script>
 </body>
 </html>
