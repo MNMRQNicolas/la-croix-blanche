@@ -10,49 +10,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="head-degr-2">
     <div id="navigation"></div>
-    <div class="header-container">
-      <h1>Contact</h1>
-      <h6>Réservez votre table chez La Croix Blanche !</h6>
-      <p>Offrez-vous une parenthèse gourmande riche en saveurs et en couleurs. Remplissez le formulaire ci-dessous pour soumettre une demande de réservation. Nous reviendrons vers vous dans les plus bref délais afin de vous confirmer votre demande.</p>
-      <div class="plats"></div>
+    <div class="header-container-contact">
+      <div class="full-container">
+        <div class="titre">
+          <h1>Contact</h1>
+          <h5>Réservez votre table chez La Croix Blanche !</h5>
+        </div>
+        <div class="small-container texte-intro">
+          <p class="white">Offrez-vous une parenthèse gourmande riche en saveurs et en couleurs. Remplissez le formulaire ci-dessous pour soumettre une demande de réservation. Nous reviendrons vers vous dans les plus bref délais afin de vous confirmer votre demande.</p>
+        </div>
+      </div>
     </div>
   </header>
   <main>
     <section class="formulaire">
-      <div class="formulaire-container">
+      <div class="container">
         <form action="" method="post">
-          <div class="nom">
-            <label for="nom">Nom *</label>
-            <input type="text" name="nom" id="nom" placeholder="Quel est votre nom" required>
-          </div>
-          <div class="prenom">
-            <label for="prenom">Prénom *</label>
-            <input type="text" name="prenom" id="prenom" placeholder="Quel est votre prénom" required>
-          </div>
-          <div class="telephone">
-            <label for="telephone">Téléphone *</label>
-            <input type="number" name="telephone" id="telephone" placeholder="Quel est votre numéro de téléphone" required>
-          </div>
-          <div class="email">
-            <label for="email">Adresse e-mail *</label>
-            <input type="email" name="email" id="email" placeholder="Quelle est votre adresse e-mail" required>
-          </div>
-          <div class="date-heure">
-            <label for="date-heure">Date et Heure *</label>
-            <input type="datetime-local" name="date-heure" id="date-heure" required>
-          </div>
-          <div class="commentaire">
-            <label for="commentaire">Commentaire</label>
-            <textarea name="commentaire" id="commentaire"></textarea>
-          </div>
-          <div class="cta-envoyer">
-            <input type="submit" value="Envoyer**">
-          </div>
-          <div class="mentions-formulaire">
-            <p>* Les champs sont obligatoires</p>
-            <p>** Toutes les demandes soumises par e-mail devront être validées de notre part pour que votre réservation soit enregistrée.</p>
+          <div class="grid-3">
+            <div class="form-champ nom">
+              <label for="nom">Nom <span class="red">*</span></label>
+              <input type="text" name="nom" id="nom" placeholder="Quel est votre nom" required>
+            </div>
+            <div class="form-champ prenom">
+              <label for="prenom">Prénom <span class="red">*</span></label>
+              <input type="text" name="prenom" id="prenom" placeholder="Quel est votre prénom" required>
+            </div>
+            <div class="form-champ telephone">
+              <label for="telephone">Téléphone <span class="red">*</span></label>
+              <input type="tel" name="telephone" id="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="Quel est votre numéro de téléphone" required>
+            </div>
+            <div class="form-champ email">
+              <label for="email">Adresse e-mail <span class="red">*</span></label>
+              <input type="email" name="email" id="email" placeholder="Quelle est votre adresse e-mail" required>
+            </div>
+            <div class="form-champ date-heure">
+              <label for="date-heure">Date et Heure <span class="red">*</span></label>
+              <input type="datetime-local" name="date-heure" id="date-heure" required>
+            </div>
+            <div class="form-champ commentaire">
+              <label for="commentaire">Commentaire</label>
+              <textarea name="commentaire" id="commentaire" placeholder="Souhaitez-vous nous partager quelque chose : regime alimentaire particulier, allergies, ...etc"></textarea>
+            </div>
+            <div class="cta-envoyer">
+              <input type="submit" value="Envoyer" class="btn-envoyer">
+            </div>
+            <div class="mentions-formulaire">
+              <p>Toutes les demandes soumises par e-mail devront être validées de notre part pour que votre réservation soit enregistrée.</p>
+              <p><span class="red">*</span> Les champs sont obligatoires</p>
+            </div>
           </div>
         </form>
       </div>

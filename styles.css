@@ -109,6 +109,32 @@ p, li {
   color: var(--black2);
   text-align: center;
 }
+button,
+input,
+select,
+textarea {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  color: var(--grey1);
+}
+textarea {
+  vertical-align: top;
+}
+::placeholder {
+  color: var(--grey1);
+  font-size: 1em;
+  line-height: normal;
+}
+input:focus[type="text"], input:focus[type="tel"],
+input:focus[type="email"], input:focus[type="datetime-local"],
+textarea:focus {
+  background: rgba(0, 8, 20, 0.5);
+  color: var(--grey1);
+  border: 1px solid var(--white);
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 .regular {
   font-weight: 400;
 }
@@ -929,4 +955,103 @@ input[type="radio"].bt-radio:checked + label::after {
     grid-column-start: 2;
     grid-column-end: 3;
     margin-bottom: 0px !important;
+}
+
+/* --- Contact --- */
+/* Header */
+.header-container-contact {
+  width: 100%;
+  height: 790px !important;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-image: url(/images/bg-header-contact.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.formulaire {
+  width: 100%;
+  height: fit-content;
+  padding: 0 0 80px 0;
+  background-color: var(--blue1);
+  background: linear-gradient(#000814, #001D3D);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Formulaire */
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-champ {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.formulaire label {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.625em;
+  line-height: normal;
+  background: linear-gradient(0deg, rgba(255,195,0,1) 0%, rgba(255,214,10,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-align: left;
+  margin-bottom: 20px;
+}
+input[type="text"], input[type="tel"],
+input[type="email"], input[type="datetime-local"] {
+  border: 1px solid #AEAEAE;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  -webkit-appearance: none;
+}
+textarea {
+  min-height: 180px;
+  border: 1px solid #AEAEAE;
+  border-radius: 8px;
+  padding: 20px 24px;
+  -webkit-appearance: none;
+}
+.commentaire, .cta-envoyer,
+.mentions-formulaire {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.cta-envoyer {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+.btn-envoyer {
+  padding: 24px 52px;
+  border-radius: 40px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125em;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--white);
+  color: var(--black2);
+}
+.btn-envoyer:hover {
+  background-color: var(--yellow2);
+  color: var(--white);
+}
+.mentions-formulaire p {
+  font-size: 1em;
+  line-height: normal;
+  color: var(--white);
+  margin-top: 8px;
 }
