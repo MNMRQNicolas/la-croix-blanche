@@ -294,8 +294,14 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background-color: var(--blue1);
+  /* background-color: var(--blue1); */
+  background-color: #001d3d00;
   padding: 38px 60px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 nav {
   width: 100%;
