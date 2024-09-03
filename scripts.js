@@ -31,8 +31,39 @@ function loadContent() {
           if (footerBloc) {
               footerBloc.innerHTML = footerData;
           }
+          addBackgroundColorScroll();
       })
       .catch(error => console.error('Erreur de chargement du contenu :', error));
 }
 
 document.addEventListener('DOMContentLoaded', loadContent);
+
+// ----------- //
+// --- Nav --- //
+// ----------- //
+function addBackgroundColorScroll() {
+  window.onscroll = function() {
+      const navAddBgColor = document.getElementById('navScroll');
+
+      if (navAddBgColor) {
+          const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+          if (document.documentElement.scrollTop > 0) {
+              navAddBgColor.classList.remove('remove-bgcolor-scroll');
+              navAddBgColor.classList.add('add-bgcolor-scroll');
+          } else {
+              navAddBgColor.classList.remove('add-bgcolor-scroll');
+              navAddBgColor.classList.add('remove-bgcolor-scroll');
+          }
+      }
+  };
+}
+// const nav = document.getElementById('navScroll')
+// function onWindowScroll(event) {
+//   if (window.scrollY < 20) {
+//     nav.classList.remove('scrolled')
+//   } else {
+//     nav.classList.add('scrolled')
+//   }
+// }
+// window.addEventListener('scroll', onWindowScroll)
