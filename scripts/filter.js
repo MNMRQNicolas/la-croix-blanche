@@ -26,3 +26,27 @@ document.addEventListener('DOMContentLoaded', function () {
   // Appel initial pour afficher les vins rouges par défaut
   filterWines();
 });
+
+// ------------------- //
+// --- Filtre Menu --- //
+// ------------------- //
+document.addEventListener("DOMContentLoaded", function() {
+  const radioButtons = document.querySelectorAll('input[name="menu-filter"]');
+  const cards = document.querySelectorAll('.card-menu');
+
+  function updateVisibleCard() {
+    cards.forEach(card => {
+      card.classList.remove('active');
+    });
+
+    const selectedValue = document.querySelector('input[name="menu-filter"]:checked').value;
+    document.getElementById(selectedValue).classList.add('active');
+  }
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', updateVisibleCard);
+  });
+
+  // Initialiser la carte "Entrées" comme visible sur mobile
+  document.getElementById('menu-entrees').classList.add('active');
+});

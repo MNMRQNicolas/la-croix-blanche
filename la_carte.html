@@ -28,12 +28,16 @@
     <div class="card-plats">
       <div class="container">
         <div class="grid-2">
-          <div class="img-card-plats">
+          <div class="img-card-plats fade">
             <img src="/images/plat-01.png" alt="Le premier plat">
           </div>
-          <div class="img-card-plats">
+          <div class="img-card-plats fade">
             <img src="/images/plat-02.png" alt="Le second plat">
           </div>
+        </div>
+        <div class="slideshow-dot" style="text-align: center;">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
         </div>
       </div>
     </div>
@@ -44,12 +48,26 @@
           <h3>Midi</h3>
         </div>
         <div class="grid-3">
-          <div class="card-menu">
+          <div class="filter-buttons">
+            <div class="menu-radio">
+              <input type="radio" id="entrees" name="menu-filter" value="menu-entrees" checked>
+              <label for="entrees">Entrées</label>
+            </div>
+            <div class="menu-radio">
+              <input type="radio" id="plats" name="menu-filter" value="menu-plats">
+              <label for="plats">Plats</label>
+            </div>
+            <div class="menu-radio">
+              <input type="radio" id="desserts" name="menu-filter" value="menu-desserts">
+              <label for="desserts">Desserts</label>
+            </div>
+          </div>
+          <div class="card-menu" id="menu-entrees">
             <div class="head-card">
               <h4>Entrées</h4>
               <p class="prix">5 €</p>
             </div>
-            <div class="content-card" id="menu-entrees">
+            <div class="content-card">
               <ul>
                 <li>Gaspacho de tomates ananas</li>
                 <li>Croquettes de boudin mayonnaise au wasabi</li>
@@ -58,12 +76,13 @@
               </ul>
             </div>
           </div>
-          <div class="card-menu">
+
+          <div class="card-menu" id="menu-plats">
             <div class="head-card">
               <h4>Plats</h4>
               <p class="prix">14 €</p>
             </div>
-            <div class="content-card" id="menu-plats">
+            <div class="content-card">
               <ul>
                 <li>Brandade de Poisson, Salade</li>
                 <li>Poke Bowl au thon</li>
@@ -72,12 +91,13 @@
               </ul>
             </div>
           </div>
-          <div class="card-menu">
+
+          <div class="card-menu" id="menu-desserts">
             <div class="head-card">
               <h4>Desserts</h4>
               <p class="prix">5 €</p>
             </div>
-            <div class="content-card" id="menu-desserts">
+            <div class="content-card">
               <ul>
                 <li>Nem Ananas</li>
                 <li>Beignet Citron Vert</li>
@@ -460,6 +480,7 @@
     <div id="footer"></div>
   </footer>
   <script src="scripts.js" defer></script>
+  <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/filter.js"></script>
 </body>
 </html>
