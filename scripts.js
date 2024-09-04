@@ -17,6 +17,9 @@ function loadContent() {
               navigationBloc.innerHTML = navigationData;
           }
 
+          addBackgroundColorScroll();
+          setupMenuToggle();
+
           const infosBloc = document.getElementById('infos');
           if (infosBloc) {
               infosBloc.innerHTML = infosData;
@@ -31,7 +34,7 @@ function loadContent() {
           if (footerBloc) {
               footerBloc.innerHTML = footerData;
           }
-          addBackgroundColorScroll();
+
       })
       .catch(error => console.error('Erreur de chargement du contenu :', error));
 }
@@ -42,11 +45,16 @@ document.addEventListener('DOMContentLoaded', loadContent);
 // --- Nav --- //
 // ----------- //
 function addBackgroundColorScroll() {
+  const maxMobileWidth = 768;
+
+  function shouldIgnoreScroll() {
+    return window.innerWidth <= maxMobileWidth;
+  }
+
   window.onscroll = function() {
       const navAddBgColor = document.getElementById('navScroll');
 
-      if (navAddBgColor) {
-          const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (navAddBgColor && !shouldIgnoreScroll()) {
 
           if (document.documentElement.scrollTop > 0) {
               navAddBgColor.classList.remove('remove-bgcolor-scroll');
@@ -58,12 +66,17 @@ function addBackgroundColorScroll() {
       }
   };
 }
-// const nav = document.getElementById('navScroll')
-// function onWindowScroll(event) {
-//   if (window.scrollY < 20) {
-//     nav.classList.remove('scrolled')
-//   } else {
-//     nav.classList.add('scrolled')
-//   }
-// }
-// window.addEventListener('scroll', onWindowScroll)
+
+// ------------ //
+// --- Menu --- //
+// ------------ //
+function setupMenuToggle() {
+  const icon = document.getElementById('icon');
+  const navContainer = document.getElementById('navScroll');
+
+  if (icon && navContainer) {
+      icon.addEventListener('click', function() {
+          navContainer.classList.toggle('active');
+      });
+  }
+}
