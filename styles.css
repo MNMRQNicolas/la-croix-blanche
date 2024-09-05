@@ -689,14 +689,94 @@ section.contact {
   display: flex;
   align-items: center;
 }
+.slideshow-dot {
+  display: none;
+}
 /* Menu & Carte */
-.card-menu {
+.filter-buttons {
+  display: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.125em;
+  line-height: normal;
+  color: var(--grey1);
+}
+.menu-radio {
+  padding: 0 16px;
+}
+.filter-buttons-desktop {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.125em;
+  line-height: normal;
+  color: var(--white);
+}
+.filter-buttons-desktop input[type="radio"] {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+label {
+  margin: 0 2px 0 0;
+  cursor: pointer;
+}
+input[type="radio"].bt-radio {
+  display: none;
+}
+input[type="radio"].bt-radio + label {
+  position: relative;
+  padding-left: 24px;
+  padding-top: 10px;
+}
+input[type="radio"].bt-radio + label::before,
+input[type="radio"].bt-radio + label::after {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  content:'';
+  border-radius: 1rem;
+}
+input[type="radio"].bt-radio + label::before {
+  bottom: 3px;
+  left: 3px;
+  border: 1px solid var(--grey1);
+  background-color: var(--grey2);
+  width: 1rem;
+  height: 1rem;
+}
+input[type="radio"].bt-radio + label::after {
+  bottom: 6px;
+  left: 6px;
+  width: calc(1rem - 6px);
+  height: calc(1rem - 6px);
+}
+input[type="radio"].bt-radio:checked + label::after {
+  background-color: var(--yellow2);
+}
+.card-vins {
+  display: none;
+}
+.card-vins.active {
+  display: block;
+}
+.card-wrapper {
   width: 100%;
   height: fit-content;
   border-radius: 24px;
   border: 1px solid #D9D9D9;
   padding: 40px 20px 16px 20px;
   display: flex;
+  display: block;
   flex-direction: column;
 }
 .head-card {
@@ -774,58 +854,10 @@ padding-right: 8px;
 .vins-container h5 {
   margin-bottom: 24px;
 }
-.filtre-vins {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.125em;
-  line-height: normal;
-  color: var(--white);
-}
-label {
-  margin: 0 16px;
-  cursor: pointer;
-}
-input[type="radio"].bt-radio {
-  display: none;
-}
-input[type="radio"].bt-radio + label {
-  position: relative;
-  padding-left: 24px;
-  padding-top: 10px;
-}
-input[type="radio"].bt-radio + label::before,
-input[type="radio"].bt-radio + label::after {
-  display: block;
-  position: absolute;
-  box-sizing: border-box;
-  content:'';
-  border-radius: 1rem;
-}
-input[type="radio"].bt-radio + label::before {
-  bottom: 3px;
-  left: 3px;
-  border: 1px solid var(--grey1);
-  background-color: var(--grey2);
-  width: 1rem;
-  height: 1rem;
-}
-input[type="radio"].bt-radio + label::after {
-  bottom: 6px;
-  left: 6px;
-  width: calc(1rem - 6px);
-  height: calc(1rem - 6px);
-}
-input[type="radio"].bt-radio:checked + label::after {
-  background-color: var(--yellow2);
-}
 .result-vins {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card-vin {
   width: 100%;
@@ -833,12 +865,6 @@ input[type="radio"].bt-radio:checked + label::after {
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-.wine {
-  display: none;
-}
-.wine.active {
-  display: block;
 }
 .result-vins h4 {
   width: 100%;
@@ -854,14 +880,6 @@ input[type="radio"].bt-radio:checked + label::after {
   justify-content: flex-start;
   align-items: start;
   padding: 0 24px;
-}
-.region {
-  width: 100%;
-  margin-bottom: 60px;
-}
-.region h5 {
-  text-align: left;
-  margin-bottom: 8px;
 }
 .content-result ul {
   width: 100%;
@@ -879,16 +897,42 @@ input[type="radio"].bt-radio:checked + label::after {
   grid-template-columns: 5fr 1fr;
   gap: 0px;
 }
-.list-vins li {
+.card-vins .head-card {
+  margin-bottom: 0;
+}
+.table-result {
+  width: 100% !important;
+  border: 0;
+  margin-top: 60px;
+}
+.region {
+  width: 100%;
+  padding-bottom: 24px;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: normal;
+  color: var(--white);
+}
+.list-vins {
+  width: 80%;
+  text-align: left;
+  vertical-align: middle;
+  padding-bottom: 8px;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 1.125em;
   line-height: normal;
   color: var(--white);
-  justify-content: start;
 }
-.list-prix-vins li {
+.list-prix-vins {
+  width: 20%;
+  text-align: right;
+  vertical-align: top;
+  padding-bottom: 8px;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -1112,8 +1156,9 @@ textarea {
     flex-direction: row;
     overflow: visible;
     top: 0;
-    background-color: var(--blue1);
     padding: 0;
+    background-color: var(--blue1);
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
   }
   nav {
     width: 100%;
@@ -1229,6 +1274,10 @@ textarea {
     font-size: 1.125em;
     line-height: normal;
   }
+  p {
+    font-size: 1em;
+    line-height: normal;
+  }
 
   /* Général */
   .container {
@@ -1245,6 +1294,12 @@ textarea {
   }
   .full-container {
     width: 100%;
+  }
+  .head-degr-1 {
+    width: 100%;
+    height: 80vh !important;
+    flex-shrink: 0;
+    background: linear-gradient(#000814, #001D3D);
   }
 
   /* --- CTA --- */
@@ -1267,8 +1322,9 @@ textarea {
     flex-direction: row;
     overflow: visible;
     top: 0;
-    background-color: var(--blue1);
     padding: 0;
+    background-color: var(--blue1);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
   }
   nav {
     width: 100%;
@@ -1442,4 +1498,139 @@ textarea {
   .mentions-legales p {
     text-align: center;
   }
+
+  /* --- Page La Carte --- */
+  /* Header */
+  .header-container-carte {
+    width: 100%;
+    height: auto;
+    padding: 0 24px 20px 24px;
+    background-image: url(/images/bg-header-la-carte-mb.png);
+    background-position-y: 148px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .header-container-carte .texte-intro {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 20px 24px;
+  }
+  .card-plats {
+    width: 100%;
+    padding: 0 24px 80px 24px;
+    background-color: var(--blue1);
+    background: linear-gradient(#001D3D, #000814);
+    position: relative;
+    margin: auto;
+  }
+  .img-card-plats {
+    display: none;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .img-card-plats img {
+    width: 100%;
+    height: auto;
+  }
+  .slideshow-dot {
+    display: block;
+    position: absolute;
+    bottom: 96px;
+  }
+  .dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 2px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active-dot, .dot:hover {
+    background: linear-gradient(0deg, rgba(255,195,0,1) 0%, rgba(255,214,10,1) 100%);
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* Menu */
+  .card-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: none; /* Cache les cards sur mobile */
+  }
+  .card-wrapper.active {
+    display: block; /* Affiche les cards sur mobile */
+  }
+  .filter-buttons {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .menu-radio {
+    margin: 0;
+    padding: 0;
+  }
+  .filter-buttons label {
+    margin: 0;
+  }
+  .content-card li {
+    font-size: 1em;
+    padding-bottom: 16px;
+  }
+  .list-vins {
+    vertical-align: middle;
+    padding-bottom: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.125em;
+    line-height: normal;
+    color: var(--white);
+  }
+  .list-prix-vins {
+    vertical-align: top;
+    padding-bottom: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: normal;
+    color: var(--white);
+    justify-content: end;
+  }
+
+
+
+
+  .list-prix li, .list-prix-vins li {
+    font-size: 1.250em;
+
+  }
+  .vins-rouges .grid-2 .content-result,
+  .vins-blancs .grid-2 .content-result {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .vins-roses .grid-1-3-1 .grid-roses-bulles,
+  .vins-bulles .grid-1-3-1 .grid-roses-bulles {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
 }
