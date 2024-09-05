@@ -1,52 +1,38 @@
-// ------------------------------ //
-// --- Filtre liste des vins --- //
-// ----------------------------- //
+// ----------------------- //
+// --- Filtre La Carte --- //
+// ----------------------- //
 document.addEventListener('DOMContentLoaded', function () {
-  const radioButtons = document.querySelectorAll('input[name="wine-category"]');
-  const wineSections = document.querySelectorAll('.wine');
+  // Fonction générique pour filtrer les sections en fonction des boutons radio
+  function filterContent(radioGroupName, contentClass) {
+    const radioButtons = document.querySelectorAll(`input[name="${radioGroupName}"]`);
+    const contentSections = document.querySelectorAll(`.${contentClass}`);
 
-  // Fonction pour filtrer les sections de vins
-  function filterWines() {
-      const selectedCategory = document.querySelector('input[name="wine-category"]:checked').value;
+    function applyFilter() {
+      const selectedCategory = document.querySelector(`input[name="${radioGroupName}"]:checked`).value;
 
-      wineSections.forEach(function (section) {
-          if (section.classList.contains(selectedCategory)) {
-              section.style.display = 'block'; // Affiche la section de vin sélectionnée
-          } else {
-              section.style.display = 'none'; // Cache les autres sections de vin
-          }
+      contentSections.forEach(function (section) {
+        section.classList.remove('active');
+        if (section.classList.contains(selectedCategory)) {
+          section.classList.add('active'); // Active uniquement la section sélectionnée
+        }
       });
-  }
+    }
 
-  // Ajout d'un écouteur d'événement pour chaque bouton radio
-  radioButtons.forEach(function (radio) {
-      radio.addEventListener('change', filterWines);
-  });
-
-  // Appel initial pour afficher les vins rouges par défaut
-  filterWines();
-});
-
-// ------------------- //
-// --- Filtre Menu --- //
-// ------------------- //
-document.addEventListener("DOMContentLoaded", function() {
-  const radioButtons = document.querySelectorAll('input[name="menu-filter"]');
-  const cards = document.querySelectorAll('.card-menu');
-
-  function updateVisibleCard() {
-    cards.forEach(card => {
-      card.classList.remove('active');
+    // Ajout d'écouteurs d'événements pour chaque bouton radio
+    radioButtons.forEach(function (radio) {
+      radio.addEventListener('change', applyFilter);
     });
 
-    const selectedValue = document.querySelector('input[name="menu-filter"]:checked').value;
-    document.getElementById(selectedValue).classList.add('active');
+    // Appel initial pour afficher la première catégorie par défaut
+    applyFilter();
   }
 
-  radioButtons.forEach(radio => {
-    radio.addEventListener('change', updateVisibleCard);
-  });
+  // Filtrer les "Menu" (Entrées, Plats, Desserts)
+  filterContent('menu-category', 'card-menu');
 
-  // Initialiser la carte "Entrées" comme visible sur mobile
-  document.getElementById('menu-entrees').classList.add('active');
+  // Filtrer la "Carte" (Entrées, Viandes et Poissons, Desserts)
+  filterContent('carte-category', 'card-carte');
+
+  // Filtrer les "Vins" (Rouges, Blancs, Rosés, Bulles)
+  filterContent('vins-category', 'card-vins');
 });
