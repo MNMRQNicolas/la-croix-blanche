@@ -27,7 +27,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("img-card-plats");
+  let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
 
   if (isMobileView()) {
@@ -65,7 +65,7 @@ function startAutoSlide() {
   clearInterval(autoSlideInterval); // S'assurer qu'il n'y a pas de double intervalle
   autoSlideInterval = setInterval(function() {
     plusSlides(1);
-  }, 4000); // Changer d'image toutes les 4 secondes
+  }, 5000); // Changer d'image toutes les 5 secondes
 }
 
 // Appel de showSlides initialement pour ajuster l'affichage selon la taille de l'écran
