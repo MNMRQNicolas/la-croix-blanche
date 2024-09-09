@@ -391,7 +391,7 @@ li.nav-telephone {
 }
 li.nav-telephone::before {
   position: absolute;
-  content: url(/images/icons/icon-telephone.svg);
+  content: url(images/icons/icon-telephone.svg);
   left: 0;
   vertical-align: middle;
 }
@@ -410,7 +410,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/images/bg-header-hp-terrasse.png);
+  background-image: url(images/bg-header-hp-terrasse.png);
   background-size: cover;
   background-position: center;
 }
@@ -488,19 +488,19 @@ header {
   margin-top: 60px;
 }
 .card-la-carte {
-  background-image: url(/images/bg-card-la-carte.png);
+  background-image: url(images/bg-card-la-carte.png);
   background-size: cover;
   background-position: top;
 }
 .card-la-cave {
-  background-image: url(/images/bg-card-la-cave.png);
+  background-image: url(images/bg-card-la-cave.png);
   background-size: cover;
   background-position: top;
 }
 /* Qui Sommes-Nous */
 .qui-sommes-nous {
   background-color: var(--black2);
-  background-image: url(/images/bg-qui-sommes-nous.png);
+  background-image: url(images/bg-qui-sommes-nous.png);
   background-repeat: no-repeat;
   background-position-y: middle;
   background-size: 50%;
@@ -568,17 +568,17 @@ header {
   text-align: left !important;
 }
 .adresse::before {
-  content: url(/images/icons/icon-adresse.png);
+  content: url(images/icons/icon-adresse.png);
   margin-right: 6px;
   vertical-align: middle;
 }
 .parking::before {
-  content: url(/images/icons/icon-parking.png);
+  content: url(images/icons/icon-parking.png);
   margin-right: 6px;
   vertical-align: middle;
 }
 .bus::before {
-  content: url(/images/icons/icon-bus.png);
+  content: url(images/icons/icon-bus.png);
   margin-right: 6px;
   vertical-align: middle;
 }
@@ -654,7 +654,7 @@ section.contact {
   text-align: center;
 }
 .dev-nm {
-  content: url(/images/icons/icon-nm.png);
+  content: url(images/icons/icon-nm.png);
 }
 
 /* --- La Carte --- */
@@ -667,7 +667,7 @@ section.contact {
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url(/images/bg-header-la-carte.png);
+  background-image: url(images/bg-header-la-carte.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -835,7 +835,7 @@ padding-right: 8px;
   width: 100%;
   height: fit-content;
   padding-bottom: 20px !important;
-  background-image: url(/images/bg-cave.png);
+  background-image: url(images/bg-cave.png);
   background-size: auto;
   background-position: top;
   background-repeat: no-repeat;
@@ -952,7 +952,7 @@ padding-right: 8px;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url(/images/bg-header-a-propos.png);
+  background-image: url(images/bg-header-a-propos.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -1058,7 +1058,7 @@ padding-right: 8px;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url(/images/bg-header-contact.png);
+  background-image: url(images/bg-header-contact.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -1096,14 +1096,14 @@ form {
   -moz-background-clip: text;
   color: transparent;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 input[type="text"], input[type="tel"],
 input[type="email"], input[type="datetime-local"] {
   border: 1px solid #AEAEAE;
   border-radius: 8px;
   padding: 20px 24px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   -webkit-appearance: none;
 }
 textarea {
@@ -1253,7 +1253,7 @@ textarea {
     text-align: center;
   }
   li.nav-telephone::before {
-    content: url(/images/icons/icon-telephone.svg);
+    content: url(images/icons/icon-telephone.svg);
     vertical-align: middle;
   }
 }
@@ -1419,7 +1419,7 @@ textarea {
     text-align: center;
   }
   li.nav-telephone::before {
-    content: url(/images/icons/icon-telephone.svg);
+    content: url(images/icons/icon-telephone.svg);
     vertical-align: middle;
   }
 
@@ -1443,7 +1443,7 @@ textarea {
   /* Qui Sommes-Nous */
   .qui-sommes-nous {
     background-color: var(--black2);
-    background-image: url(/images/bg-qui-sommes-nous-mb.png);
+    background-image: url(images/bg-qui-sommes-nous-mb.png);
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
@@ -1516,7 +1516,7 @@ textarea {
     width: 100%;
     height: auto;
     padding: 0 24px 20px 24px;
-    background-image: url(/images/bg-header-la-carte-mb.png);
+    background-image: url(images/bg-header-la-carte-mb.png);
     background-position-y: 148px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1645,7 +1645,7 @@ textarea {
     width: 100%;
     height: auto;
     padding: 0 24px 20px 24px;
-    background-image: url(/images/bg-header-a-propos-mb.png);
+    background-image: url(images/bg-header-a-propos-mb.png);
     background-position-y: 148px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1730,4 +1730,29 @@ textarea {
     margin-bottom: 20px;
   }
 
+  /* --- Page Contact --- */
+  /* Header */
+  .header-container-contact {
+    width: 100%;
+    height: auto;
+    padding: 0 24px 20px 24px;
+    background-image: url(images/bg-header-contact-mb.png);
+    background-position-y: 148px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .header-container-contact .texte-intro {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 20px 24px;
+  }
+
+  /* Formulaire */
+  .formulaire {
+    padding: 20px 24px 80px 24px;
+  }
+  .form-champ {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
