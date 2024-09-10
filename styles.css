@@ -1152,6 +1152,53 @@ textarea {
 
 /* --- Tablet --- */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* --- Typographies --- */
+  h1 {
+    font-size: 3.75em;
+    line-height: normal;
+  }
+  h2 {
+    font-size: 2.5em;
+    line-height: normal;
+  }
+  h3 {
+    font-size: 2em;
+    line-height: normal;
+  }
+  h4 {
+    font-size: 2em;
+    line-height: normal;
+  }
+  h5 {
+    font-size: 1.250em;
+    line-height: normal;
+  }
+  h6 {
+    font-size: 1.125em;
+    line-height: normal;
+  }
+  p {
+    font-size: 1em;
+    line-height: normal;
+  }
+
+  /* Général */
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .small-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .full-container {
+    width: 100%;
+  }
+
   /* Navigation Tablet */
   .add-bgcolor-scroll {
     background-color: rgba(0, 0, 0, 0.8);
@@ -1255,6 +1302,126 @@ textarea {
   li.nav-telephone::before {
     content: url(images/icons/icon-telephone.svg);
     vertical-align: middle;
+  }
+
+  /* --- Page d'Accueil --- */
+  /* Header */
+  .slogan p {
+    color: #6D879F;
+  }
+
+  /* Intro Restaurant */
+  .restaurant .texte-intro {
+    padding: 0 24px 40px 24px;
+  }
+
+  /* Prestations */
+  .prestations .texte-intro {
+    padding: 0 24px 40px 24px;
+  }
+
+  .card-la-carte, .card-la-cave {
+    min-height: 480px;
+    padding: 60px 24px;
+  }
+  .card-la-carte p, .card-la-cave p {
+    margin-top: 40px;
+  }
+
+  /* Qui Sommes-Nous */
+  .qui-sommes-nous {
+    background-color: var(--black2);
+    background-image: url(images/bg-qui-sommes-nous-mb.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: cover;
+  }
+  .texte-presentation {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 340px;
+  }
+  .texte-presentation p {
+    padding: 0 24px;
+    color: var(--white);
+    text-align: left;
+  }
+
+  /* Infos Pratiques */
+  .acces, .map-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 16px;
+  }
+  .acces {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0 24px;
+  }
+  .map-container {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .horaires {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 0 24px;
+    margin-bottom: 16px;
+  }
+  .services {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 0 0 0 24px;
+    margin-bottom: 0px !important;
+  }
+  .paiement {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 0 24px 0 0;
+    margin-bottom: 0px !important;
+  }
+
+  /* Footer */
+  #footer {
+    width: 100%;
+  }
+  .coordonnees {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .sous-navigation {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .reseaux-sociaux {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .mentions-legales {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .reseaux-sociaux ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .reseaux-sociaux li {
+    margin-right: 0px;
+  }
+  .coordonnees h6, .coordonnees li,
+  .sous-navigation h6, .sous-navigation li,
+  .reseaux-sociaux h6, .reseaux-sociaux li {
+    text-align: center;
+  }
+  .mentions-legales p {
+    text-align: center;
   }
 }
 
@@ -1429,7 +1596,16 @@ textarea {
     color: #6D879F;
   }
 
+  /* Intro Restaurant */
+  .restaurant .texte-intro {
+    padding: 0 24px 40px 24px;
+  }
+
   /* Prestations */
+  .prestations .texte-intro {
+    padding: 0 24px 40px 24px;
+  }
+
   .card-la-carte, .card-la-cave {
     grid-column-start: 1;
     grid-column-end: 3;
