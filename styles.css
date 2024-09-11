@@ -182,15 +182,21 @@ footer {
   padding: 60px 24px;
   background-color: var(--black2);
 }
+.header-degr-home {
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #003566 0%, #001D3D 50%, #000814 100%);
+}
 .head-degr-1 {
   width: 100%;
-  height: 690px !important;
+  height: fit-content;
   flex-shrink: 0;
   background: linear-gradient(#000814, #001D3D);
 }
 .head-degr-2 {
   width: 100%;
-  height: 690px !important;
+  height: fit-content;
   flex-shrink: 0;
   background: linear-gradient(#001D3D, #000814);
 }
@@ -208,6 +214,10 @@ footer {
 }
 .full-container {
   width: 100%;
+}
+.form-container {
+  width: 100%;
+  padding: 0 24px;
 }
 .fle-dir-col-cen-bot {
   display: flex;
@@ -398,12 +408,6 @@ li.nav-telephone::before {
 
 /* --- Page d'Accueil --- */
 /* Header */
-header {
-  width: 100%;
-  height: 100vh;
-  flex-shrink: 0;
-  background: radial-gradient(50% 50% at 50% 50%, #003566 0%, #001D3D 50%, #000814 100%);
-}
 .header-container-accueil {
   width: 100%;
   height: 100vh;
@@ -661,16 +665,19 @@ section.contact {
 /* Header */
 .header-container-carte {
   width: 100%;
-  height: 790px !important;
+  height: fit-content;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   background-image: url(images/bg-header-la-carte.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
+}
+.header-container-carte .titre {
+  margin-top: 410px;
 }
 .slideshow-plats {
   width: 100%;
@@ -949,7 +956,7 @@ padding-right: 8px;
 /* Header */
 .header-container-a-propos {
   width: 100%;
-  height: 790px !important;
+  height: fit-content;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -959,6 +966,9 @@ padding-right: 8px;
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
+}
+.header-container-a-propos .titre {
+  margin-top: 410px;
 }
 /* Swiper JS */
 .bg-swiper {
@@ -1054,11 +1064,11 @@ padding-right: 8px;
     margin-bottom: 0px !important;
 }
 
-/* --- Contact --- */
+/* --- Page Contact --- */
 /* Header */
 .header-container-contact {
   width: 100%;
-  height: 790px !important;
+  height: fit-content;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -1068,6 +1078,9 @@ padding-right: 8px;
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
+}
+.header-container-contact .titre {
+  margin-top: 410px;
 }
 .formulaire {
   width: 100%;
@@ -1081,7 +1094,8 @@ padding-right: 8px;
 }
 /* Formulaire */
 form {
-  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -1106,6 +1120,7 @@ form {
 }
 input[type="text"], input[type="tel"],
 input[type="email"], input[type="datetime-local"] {
+  width: 100%;
   border: 1px solid #AEAEAE;
   border-radius: 8px;
   padding: 20px 24px;
@@ -1203,6 +1218,18 @@ textarea {
   }
   .full-container {
     width: 100%;
+  }
+  .head-degr-1 {
+    width: 100%;
+    height: fit-content;
+    flex-shrink: 0;
+    background: linear-gradient(#000814, #001D3D);
+  }
+  .head-degr-2 {
+    width: 100%;
+    height: fit-content;
+    flex-shrink: 0;
+    background: linear-gradient(#001D3D, #000814);
   }
 
   /* Navigation Tablet */
@@ -1434,12 +1461,16 @@ textarea {
   /* Header */
   .header-container-carte {
     width: 100%;
-    height: auto;
+    height: fit-content;
     padding: 0 24px 20px 24px;
+    justify-content: start;
     background-image: url(images/bg-header-la-carte.png);
     background-position-y: 148px;
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+  .header-container-carte .titre {
+    margin-top: 340px;
   }
   .header-container-carte .texte-intro {
     width: 100%;
@@ -1552,12 +1583,16 @@ textarea {
   /* Header */
   .header-container-a-propos {
     width: 100%;
-    height: auto;
+    height: fit-content !important;
     padding: 0 24px 20px 24px;
+    justify-content: start;
     background-image: url(images/bg-header-a-propos.png);
     background-position-y: 148px;
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+  .header-container-a-propos .titre {
+    margin-top: 340px;
   }
   .header-container-a-propos .texte-intro {
     width: 100%;
@@ -1641,6 +1676,84 @@ textarea {
     font-size: 1em;
     line-height: normal;
   }
+
+  /* --- Page Contact --- */
+  /* Header */
+  .header-container-contact {
+    width: 100%;
+    height: fit-content !important;
+    padding: 0 24px 20px 24px;
+    justify-content: start;
+    background-image: url(images/bg-header-contact.png);
+    background-position-y: 148px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .header-container-contact .titre {
+    margin-top: 340px;
+  }
+  .header-container-contact .texte-intro {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 20px 24px;
+  }
+
+  /* Formulaire */
+  .formulaire {
+    padding: 20px 48px 80px 48px;
+  }
+  .formulaire .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nom {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .prenom {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .telephone {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .email {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .date-heure {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .commentaire {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .cta-envoyer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .mentions-formulaire {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
 }
 
 /* --- Smartphone --- */
@@ -1693,7 +1806,7 @@ textarea {
   }
   .head-degr-1 {
     width: 100%;
-    height: 80vh !important;
+    height: fit-content;
     flex-shrink: 0;
     background: linear-gradient(#000814, #001D3D);
   }
@@ -1911,7 +2024,7 @@ textarea {
   /* Header */
   .header-container-carte {
     width: 100%;
-    height: auto;
+    height: fit-content;
     padding: 0 24px 20px 24px;
     background-image: url(images/bg-header-la-carte-mb.png);
     background-position-y: 148px;
@@ -2043,7 +2156,7 @@ textarea {
   /* Header */
   .header-container-a-propos {
     width: 100%;
-    height: auto;
+    height: fit-content;
     padding: 0 24px 20px 24px;
     background-image: url(images/bg-header-a-propos-mb.png);
     background-position-y: 148px;
@@ -2149,7 +2262,7 @@ textarea {
   /* Header */
   .header-container-contact {
     width: 100%;
-    height: auto;
+    height: fit-content;
     padding: 0 24px 20px 24px;
     background-image: url(images/bg-header-contact-mb.png);
     background-position-y: 148px;
