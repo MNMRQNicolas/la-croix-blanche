@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupération et sécurisation des données
     $nom = htmlspecialchars(trim($_POST['nom']));
     $prenom = htmlspecialchars(trim($_POST['prenom']));
     $telephone = htmlspecialchars(trim($_POST['telephone']));
@@ -14,14 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Destinataire
-    // $to = "contact@lacroixblanchebordeaux.com";
-    $to = "nicolas.monmerque@gmail.com";
-
-    // Sujet de l'email
-    $subject = "Nouvelle demande de " . $prenom . " " . $nom;
-
-    // Message
+    // Préparer l'email
+    $to = "contact@lacroixblanchebordeaux.com";  // Adresse de destination
+    $subject = "Nouvelle demande de contact de " . $prenom . " " . $nom;
     $message = "
     Nom : $nom\n
     Prénom : $prenom\n
@@ -30,8 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Date et Heure : $dateHeure\n
     Commentaire : $commentaire
     ";
-
-    // En-têtes
     $headers = "From: " . $email . "\r\n" .
                "Reply-To: " . $email . "\r\n" .
                "X-Mailer: PHP/" . phpversion();
