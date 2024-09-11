@@ -1629,6 +1629,18 @@ textarea {
     position: relative;
     margin: auto;
   }
+  .fournisseur-text h4 {
+    font-size: 1.5em;
+    line-height: normal;
+  }
+  .fournisseur-text h5 {
+    font-size: 1.250em;
+    line-height: normal;
+  }
+  .fournisseur-text p {
+    font-size: 1em;
+    line-height: normal;
+  }
 }
 
 /* --- Smartphone --- */
@@ -1684,6 +1696,9 @@ textarea {
     height: 80vh !important;
     flex-shrink: 0;
     background: linear-gradient(#000814, #001D3D);
+  }
+  .texte-intro {
+    font-size: 1em;
   }
 
   /* --- CTA --- */
@@ -2116,6 +2131,18 @@ textarea {
   }
   .fournisseur-card {
     margin-bottom: 20px;
+  }
+  .fournisseur-text h4 {
+    font-size: 1.5em;
+    line-height: normal;
+  }
+  .fournisseur-text h5 {
+    font-size: 1.250em;
+    line-height: normal;
+  }
+  .fournisseur-text p {
+    font-size: 1em;
+    line-height: normal;
   }
 
   /* --- Page Contact --- */
