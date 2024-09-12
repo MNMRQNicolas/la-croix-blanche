@@ -28,6 +28,12 @@
   <main>
     <section class="formulaire">
       <div class="form-container">
+        <div id="alert-overlay" class="hidden">
+          <div id="alert-box">
+              <span id="close-alert" class="close-alert">&times;</span>
+              <p id="alert-message"></p>
+          </div>
+        </div>
         <form action="form_process.php" method="post">
           <div class="grid-3">
             <div class="form-champ nom">
@@ -71,5 +77,6 @@
     <div id="footer"></div>
   </footer>
   <script src="scripts.js" defer></script>
+  <script src="scripts/form_handler.js" defer></script>
 </body>
 </html>

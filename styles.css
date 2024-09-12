@@ -406,6 +406,47 @@ li.nav-telephone::before {
   vertical-align: middle;
 }
 
+/* --- Alertes --- */
+#alert-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+.hidden {
+  display: none !important;
+}
+#alert-box {
+  background-color: var(--white);
+  padding: 60px 40px;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.close-alert {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  color: var(--grey1);
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-alert:hover {
+  color: var(--black1);
+}
+
 /* --- Page d'Accueil --- */
 /* Header */
 .header-container-accueil {
@@ -1091,6 +1132,7 @@ padding-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 /* Formulaire */
 form {

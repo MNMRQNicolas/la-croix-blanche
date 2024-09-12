@@ -1,6 +1,6 @@
-// ------------------------------------- //
-// --- Formulaire de la page Contact --- //
-// ------------------------------------- //
+// ------------------------------------------------------------- //
+// --- Formulaire de la page Contact - Validation des champs --- //
+// ------------------------------------------------------------- //
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", function (e) {
       let form = e.target;
