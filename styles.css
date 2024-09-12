@@ -418,7 +418,7 @@ li.nav-telephone::before {
   width: 100%;
   height: 100%;
   padding: 0 24px;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
 }
 .hidden {
@@ -446,7 +446,6 @@ li.nav-telephone::before {
 .close-alert:hover {
   color: var(--black1);
 }
-
 
 /* --- Page d'Accueil --- */
 /* Header */
