@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <style>
+    .mySlides {
+      display: none;
+    }
+    .container {
+      position: relative;
+    }
+    .nav-slides-prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+    .bullet {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      border-radius: 8px;
+      padding:0;
+      background-color: black;
+    }
+    .w3-yellow {
+      background-color: yellow;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content">
+    <div class="mySlides container">
+      <img src="/images/slideshow-equipe.png" width="100%" alt="">
+      <h2>Titre numéro 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corrupti delectus sunt ipsa facilis? Debitis est maxime quos laboriosam fugiat quasi dolorum dolores tenetur eligendi nostrum laborum totam, soluta facere labore aut ipsum suscipit quas perspiciatis dicta? Sint, nostrum debitis?</p>
+    </div>
+    <div class="mySlides container">
+      <img src="/images/slideshow-restaurant.png" width="100%" alt="">
+      <h2>Titre numéro 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda tempora quam est eius neque ad consequuntur esse. Tempore, accusamus deserunt id quas aperiam possimus vitae illo quaerat exercitationem. Sunt repudiandae earum reprehenderit odio excepturi minima facere, harum dignissimos hic voluptate labore natus libero et distinctio dolorem tenetur quas, eos corporis?</p>
+    </div>
+    <div class="mySlides container">
+      <img src="/images/slideshow-quartier.png" width="100%" alt="">
+      <h2>Titre numéro 3</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde excepturi quae alias placeat animi deserunt esse maxime numquam provident, id totam aperiam, commodi, voluptatum debitis. Expedita culpa, qui numquam deserunt repellendus, unde quia doloremque eligendi perspiciatis explicabo exercitationem amet aliquam eius, quae deleniti quis sequi!</p>
+    </div>
+    <button class="nav-slides-prev" onclick="plusDivs(-1)">&#10094;</button>
+    <span class="bullet dot" onclick="currentDiv(1)"></span>
+    <span class="bullet dot" onclick="currentDiv(2)"></span>
+    <span class="bullet dot" onclick="currentDiv(3)"></span>
+    <button class="nav-slides-next" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+<script>
+  let slideIndex = 0;
+  plusDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    let i;
+    const x = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-yellow", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-yellow";
+  }
+</script>
+</body>
+</html>
