@@ -62,41 +62,31 @@
               <label for="desserts">Desserts</label>
             </div>
           </div>
-          <div class="card-wrapper card-menu menu-entrees">
+          <div class="card-wrapper card-menu menu-entrees" id="menu-entrees">
             <div class="head-card">
               <h4>Entrées</h4>
-              <p class="prix" id="menu-prix-entrees"></p>
+              <p class="prix"><span id="prix"></span></p>
             </div>
             <div class="content-card">
-              <ul id="menu-entrees"></ul>
+              <ul></ul>
             </div>
           </div>
-          <div class="card-wrapper card-menu menu-plats">
+          <div class="card-wrapper card-menu menu-plats" id="menu-plats">
             <div class="head-card">
               <h4>Plats</h4>
-              <p class="prix">14 €</p>
+              <p class="prix"><span id="prix"></span></p>
             </div>
             <div class="content-card">
-              <ul>
-                <li>Brandade de Poisson, Salade</li>
-                <li>Poke Bowl au thon</li>
-                <li>Wok de Boeuf thaï</li>
-                <li>Tartare de crevettes, Avocat avec Frites</li>
-              </ul>
+              <ul></ul>
             </div>
           </div>
-          <div class="card-wrapper card-menu menu-desserts">
+          <div class="card-wrapper card-menu menu-desserts" id="menu-desserts">
             <div class="head-card">
               <h4>Desserts</h4>
-              <p class="prix">5 €</p>
+              <p class="prix"><span id="prix"></span></p>
             </div>
             <div class="content-card">
-              <ul>
-                <li>Nem Ananas</li>
-                <li>Beignet Citron Vert</li>
-                <li>Île Flotante</li>
-                <li>Crème Renversée</li>
-              </ul>
+              <ul></ul>
             </div>
           </div>
         </div>
@@ -127,24 +117,8 @@
             </div>
             <div class="content-card" id="carte-entrees">
               <div class="grid-2">
-                <ul class="list-carte">
-                  <li>Croquettes de Jambon Coulis de Piquillos</li>
-                  <li>Carpaccio de Poule, sauce Vierge aux échalottes</li>
-                  <li>Chèvre Rôtu, Fraicheur de haricots</li>
-                  <li>Burrata, Tomate Coeur de Boeuf</li>
-                  <li>Duo de Ris de Veau et Croquettes de Pieds de Cochon</li>
-                  <li>Thon torrefié”, sauce sashimi</li>
-                  <li>Duo Gravelax et Cabillaud enmaki</li>
-                </ul>
-                <ul class="list-prix">
-                  <li>10 €</li>
-                  <li>14 €</li>
-                  <li>12 €</li>
-                  <li>14 €</li>
-                  <li>14 €</li>
-                  <li>13 €</li>
-                  <li>14 €</li>
-                </ul>
+                <ul class="list-carte"></ul>
+                <ul class="list-prix"></ul>
               </div>
             </div>
           </div>
@@ -154,30 +128,8 @@
             </div>
             <div class="content-card" id="carte-viandes-poissons">
               <div class="grid-2">
-                <ul class="list-carte">
-                  <li>Tartare de Boeuf, Trio de frites au Parmesan, Salade</li>
-                  <li>Cote de Boeuf pour 2/pers (1Kg), Os à Moelle, Trio de frites</li>
-                  <li>Cote de Veau de lait aux Pruneaux, Purée</li>
-                  <li>Onglet de Boeuf, Trio de frites, Salade</li>
-                  <li>Ris de Veau, Purée</li>
-                  <li>Merlu à l’Espagnole, Pétales d’Ail frits, Risotto à l’encre de seiche</li>
-                  <li>Dorade au citron confit pour 2/pers (900gr)</li>
-                  <li>Thon croustillant, toom libanaise, Légumes croquants</li>
-                  <li>Céviché de dorade Sébaste, Trio de frites au parmesan</li>
-                  <li>Chipirons au chorizo, Risotto à l’encre de seiche</li>
-                </ul>
-                <ul class="list-prix">
-                  <li>18 €</li>
-                  <li>72 €</li>
-                  <li>25 €</li>
-                  <li>18 €</li>
-                  <li>28 €</li>
-                  <li>19 €</li>
-                  <li>58 €</li>
-                  <li>27 €</li>
-                  <li>20 €</li>
-                  <li>26 €</li>
-                </ul>
+                <ul class="list-carte"></ul>
+                <ul class="list-prix"></ul>
               </div>
             </div>
           </div>
@@ -187,26 +139,8 @@
             </div>
             <div class="content-card" id="carte-desserts">
               <div class="grid-2">
-                <ul class="list-carte">
-                  <li>Nem Ananas</li>
-                  <li>Beignet Citron Vert</li>
-                  <li>Île Flotante</li>
-                  <li>Crème Renversée</li>
-                  <li>Nem Ananas</li>
-                  <li>Beignet Citron Vert</li>
-                  <li>Île Flotante</li>
-                  <li>Crème Renversée</li>
-                </ul>
-                <ul class="list-prix">
-                  <li>10 €</li>
-                  <li>12 €</li>
-                  <li>8 €</li>
-                  <li>9 €</li>
-                  <li>13 €</li>
-                  <li>15 €</li>
-                  <li>14 €</li>
-                  <li>10 €</li>
-                </ul>
+                <ul class="list-carte"></ul>
+                <ul class="list-prix"></ul>
               </div>
             </div>
           </div>
@@ -572,6 +506,6 @@
   <script src="scripts.js" defer></script>
   <script src="/scripts/slideshow.js"></script>
   <script src="/scripts/filter.js"></script>
-  <script src="scripts/restaurant_menu.js" defer></script>
+  <script src="scripts/menu_carte.js" defer></script>
 </body>
 </html>
