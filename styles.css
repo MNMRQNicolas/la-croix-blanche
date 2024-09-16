@@ -383,7 +383,7 @@ nav li a:active {
   grid-column-end: 6;
 }
 .nav-telephone {
-  min-width: 100px;
+  max-width: 210px;
   grid-column-start: 7;
   grid-column-end: 8;
   overflow: visible;
