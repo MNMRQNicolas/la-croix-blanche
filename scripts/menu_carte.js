@@ -53,7 +53,7 @@ function loadCarte(carteData) {
 
 function loadDataFromGoogleSheet() {
   const spreadsheetId = '1XvCwGZh5fMR9P4dHYrF54NlwLtJVfxM3VSPdVXWMsYU';
-  const apiKey = 'AIzaSyAU_VyyGJvkzn7jusb_5fHlaRvjRp3xaZ0';
+  const apiKey = '';
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?ranges=menu&ranges=carte&key=${apiKey}`;
 
   fetch(url)
