@@ -354,13 +354,15 @@ nav li {
 nav li a {
   text-decoration: none;
 }
-nav li a:hover {
+.nav-accueil a:hover, .nav-la-carte a:hover,
+.nav-a-propos a:hover, .nav-contact a:hover {
   text-decoration: none;
   color: var(--yellow2);
 }
-nav li a:active {
+.nav-accueil a:active, .nav-la-carte a:active,
+.nav-a-propos a:active, .nav-contact a:active {
   text-decoration: none;
-  color: var(--yellow2);
+  color: var(--yellow1);
 }
 .nav-accueil {
   min-width: 100px;
@@ -686,6 +688,15 @@ section.contact {
   display: inline-flex;
   vertical-align: middle;
   margin-right: 12px;
+}
+.reseaux-sociaux li a img {
+  width: 32px;
+  opacity: 0.8;
+  transition: opacity 200ms ease-in-out;
+}
+.reseaux-sociaux li a:hover img {
+  width: 32px;
+  opacity: 1;
 }
 .coordonnees li, .sous-navigation li, .reseaux-sociaux li {
   color: var(--grey1) !important;
