@@ -22,7 +22,9 @@ input {
   --yellow2: #ffd60a;
   --grey1: #AEAEAE;
   --grey2: #D9D9D9;
+  --grey3: #ededed;
   --white: #FFFFFF;
+  --white2: #fafafa;
 }
 .white {
   color: #FFFFFF !important;
@@ -1098,7 +1100,7 @@ padding-right: 8px;
   width: fit-content;
 }
 .fournisseur-card {
-  margin-bottom: 16px;
+  padding: 24px;
 }
 .fournisseur-img {
   display: flex;
@@ -1106,12 +1108,12 @@ padding-right: 8px;
   align-items: center;
   margin-bottom: 16px;
 }
-.fournisseur-card p {
-  font-size: 1em;
-  line-height: normal;
-  padding: 0 8px;
+.fournisseur-text p {
+  font-size: 0.950em;
+  line-height: 1.4em;
+  padding: 8px 0 0 0;
 }
-.fournisseur-card h5 {
+.fournisseur-text h5 {
   font-size: 1.5em;
   line-height: normal;
   color: var(--blue2);
