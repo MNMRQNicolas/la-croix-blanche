@@ -686,6 +686,9 @@ section.contact {
 .coordonnees ul, .sous-navigation ul, .reseaux-sociaux ul {
   list-style: none;
 }
+.sous-navigation a:hover {
+  color: var(--white);
+}
 .reseaux-sociaux li {
   display: inline-flex;
   vertical-align: middle;
@@ -710,6 +713,9 @@ section.contact {
   color: var(--grey1) !important;
   font-size: 1em;
   text-align: center;
+}
+.mentions-legales a:hover {
+  color: var(--white);
 }
 .dev-nm {
   content: url(images/icons/icon-nm.png);
@@ -1229,6 +1235,66 @@ textarea {
   line-height: normal;
   color: var(--white);
   margin-top: 8px;
+}
+
+/* --- Page Mentions légales --- */
+/* Header */
+.header-container-mentions-legales {
+  width: 100%;
+  height: 400px;
+  flex-shrink: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #003566 0%, #001D3D 50%, #000814 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.container-mentions-legales {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.titre-mentions-legales {
+  background-color: var(--blue2);
+  padding: 8px 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+.titre-mentions-legales p {
+  color: var(--white) !important;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6em;
+  line-height: normal;
+  text-align: left !important;
+}
+.texte-mentions-legales {
+  padding: 0 16px;
+}
+.texte-mentions-legales p {
+  color: var(--black2) !important;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  line-height: normal;
+  text-align: left !important;
+  margin-bottom: 16px;
+}
+.texte-mentions-legales ul {
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+.texte-mentions-legales li {
+  color: var(--black2) !important;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  line-height: normal;
+  text-align: left !important;
 }
 /* ------------------------------------------- */
 /* -------------- MEDIA QUERIES -------------- */
