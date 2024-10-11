@@ -472,9 +472,16 @@ li.nav-telephone::before {
 }
 .slogan h1 {
   padding-bottom: 12px;
+  line-height: 1em;
 }
-.slogan h2 {
-  padding-bottom: 12px;
+.slogan-titre {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 0.4em !important;
+  text-align: center;
   color: var(--white);
 }
 .slogan p {
@@ -2069,6 +2076,9 @@ textarea {
 
   /* --- Page d'Accueil --- */
   /* Header */
+  .slogan h1 {
+    font-size: 3rem;
+  }
   .slogan p {
     color: #6D879F;
   }
