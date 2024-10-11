@@ -1459,6 +1459,9 @@ textarea {
     text-decoration: none;
     color: var(--yellow2);
   }
+  .nav-telephone {
+    max-width: 240px;
+  }
   li.nav-telephone {
     font-size: 1.5em;
     background: linear-gradient(0deg, rgba(255,195,0,1) 0%, rgba(255,214,10,1) 100%);
@@ -2059,6 +2062,9 @@ textarea {
   nav li a:active {
     text-decoration: none;
     color: var(--yellow2);
+  }
+  .nav-telephone {
+    max-width: 250px;
   }
   li.nav-telephone {
     font-size: 1.5em;

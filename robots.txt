@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /politique_de_confidentialite.html
+Disallow: /mentions_legales.html
+
+Sitemap: https://lacroixblanchebordeaux.com/sitemap.xml
+Sitemap: https://www.lacroixblanchebordeaux.com/sitemap.xml
