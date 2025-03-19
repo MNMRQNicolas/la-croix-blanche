@@ -468,7 +468,7 @@ li.nav-telephone::before {
 }
 
 .fermeture p {
-  color: var(--white);
+  color: var(--white2);
   font-weight: 900;
   text-transform: uppercase;
 }
